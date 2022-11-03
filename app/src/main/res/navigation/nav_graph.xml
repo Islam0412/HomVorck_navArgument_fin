@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nuv_graf"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.homvorck_navargument_fin.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_seconFragment"
+            app:destination="@id/seconFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seconFragment"
+        android:name="com.example.homvorck_navargument_fin.SeconFragment"
+        android:label="fragment_secon"
+        tools:layout="@layout/fragment_secon" >
+        <argument
+            android:name="argmarval"
+            app:argType="com.example.homvorck_navargument_fin.MarvelDataClas"/>
+    </fragment>
+
+</navigation>
